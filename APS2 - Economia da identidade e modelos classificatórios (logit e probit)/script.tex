@@ -1,0 +1,1220 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={APS II - Microeconomia IV},
+  pdfauthor={João Casella, Pedro Marino, Victor Alves},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{APS II - Microeconomia IV}
+\author{João Casella, Pedro Marino, Victor Alves}
+\date{2022-09-16}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{manipulauxe7uxe3o-da-base-de-dados}{%
+\section{Manipulação da base de
+dados}\label{manipulauxe7uxe3o-da-base-de-dados}}
+
+\hypertarget{descritivas}{%
+\section{Descritivas}\label{descritivas}}
+
+Felicidade entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ happy, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Se considera feliz\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição da felicidade entre mulheres\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não feliz\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Feliz\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+Distribuição da felicidade entre mulheres casadas e solteiras
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wvs\_mulheres2 }\OtherTok{\textless{}{-}}\NormalTok{ wvs\_mulheres }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{married =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{      married }\SpecialCharTok{==} \DecValTok{1} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Casada\textquotesingle{}}\NormalTok{,}
+      \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Não casada\textquotesingle{}}
+\NormalTok{    )}
+\NormalTok{  )}
+
+\NormalTok{svy\_mulheres2 }\OtherTok{\textless{}{-}} \FunctionTok{svydesign}\NormalTok{(}\AttributeTok{id =} \SpecialCharTok{\textasciitilde{}}\DecValTok{1}\NormalTok{, }
+                           \AttributeTok{weights =}\NormalTok{ wvs\_mulheres2}\SpecialCharTok{$}\NormalTok{sample\_weight, }
+                           \AttributeTok{data =}\NormalTok{ wvs\_mulheres2)}
+\NormalTok{svy\_mulheres2 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ happy, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Status matrimonial\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição da felicidade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{\textquotesingle{}Entre casadas e solteiras\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}Fonte: WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não feliz\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Feliz\textquotesingle{}}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{cols =} \FunctionTok{vars}\NormalTok{(married))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+Distribuição da felicidade entre mulheres com e sem filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wvs\_mulheres0 }\OtherTok{\textless{}{-}}\NormalTok{ wvs\_mulheres }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{children =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{      children }\SpecialCharTok{==} \DecValTok{0} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Sem filhos\textquotesingle{}}\NormalTok{,}
+      \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Com filhos\textquotesingle{}}\NormalTok{))}
+
+\NormalTok{svy\_mulheres0 }\OtherTok{\textless{}{-}} \FunctionTok{svydesign}\NormalTok{(}\AttributeTok{id =} \SpecialCharTok{\textasciitilde{}}\DecValTok{1}\NormalTok{, }
+                           \AttributeTok{weights =}\NormalTok{ wvs\_mulheres0}\SpecialCharTok{$}\NormalTok{sample\_weight, }
+                           \AttributeTok{data =}\NormalTok{ wvs\_mulheres0)}
+\NormalTok{svy\_mulheres0 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ happy, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Se considera feliz\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição da da felicidade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{subtitle =} \StringTok{\textquotesingle{}Entre mulheres com e sem filhos\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não feliz\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Feliz\textquotesingle{}}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{cols =} \FunctionTok{vars}\NormalTok{(children))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+Distribuição da quantidade de filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{as\_factor}\NormalTok{(children), }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Filhos\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição da quantidade de filhos entre as mulheres\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+Distribuição da importância da família entre as mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ family\_important, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Você considera a família algo importante?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por importância da familía\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não considera família importante\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Considera família importante\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+Distribuição do dever de ter filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ duty\_have\_children, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}É seu dever para a sociedade ter filhos?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por opinião sobre o dever de ter crianças\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não concorda\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Concorda\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+Distribuição sobre trabalhar em casa ou ser dona de casa
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ happy\_as\_housewife, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Ser dona de casa é tão bom quanto trabalhar fora de casa?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres sobre trabalhar ou ser dona de casa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não concorda\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Concorda\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+Distribuição da opinião sobre sofrimente de crianças que a mãe trabalha
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ children\_suffers\_work\_mom, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}A criança sofre quando a mãe trabalha?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres de acordo opinião sobre sofrimento de criança\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não concorda \textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Concorda\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+Distribuição da conformidade entre as mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ conformity, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Conformidade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição da conformidade à teoria entre mulheres\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não se conforma\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Se conforma\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+Opinião sobre bater em seus filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ not\_acceptable\_beat\_children, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}É válido que os pais batam em seus filhos?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres de acordo opinião sobre bater em crianças\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não concorda \textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Concorda\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+Distribuição da preocupação com a educação de seus filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ worries\_education\_children, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Se preocupa em dar boa educação para seus filhos?\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres de acordo opinião sobre boa eduação para crianças\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Não concorda \textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Concorda\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+Distribuição do país entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ country, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}País\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição do país das mulheres\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{90}\NormalTok{, }\AttributeTok{vjust =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{hjust=}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-14-1.pdf}
+
+Distribuição do sexo
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ sex, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Sexo\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição por sexo\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+Distribuição da faixa etária das mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Idade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por faixa etária\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-16-1.pdf}
+
+Distribuição do estado civil entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ married, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Estado Civil\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por estado civil\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\SpecialCharTok{+}
+    \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Solteira\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Casada\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-17-1.pdf}
+
+Distribuição do número de filhos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{fct\_infreq}\NormalTok{(number\_children), }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Número de Filhos\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por número de filhos\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-18-1.pdf}
+
+Distribuição da escolariadade entre as mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ education\_scale, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Escolaridade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por escolaridade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Analfabeta\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Ensino Infantil\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Ensino Fundamental I\textquotesingle{}}\NormalTok{,}
+                              \StringTok{\textquotesingle{}Ensino Fundamental II\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Ensino Médio\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Superior Incompleto\textquotesingle{}}\NormalTok{,}
+                              \StringTok{\textquotesingle{}Superior Completo\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Mestrado | Equivalentes\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Doutorado\textquotesingle{}}\NormalTok{)) }\SpecialCharTok{+} 
+  \FunctionTok{coord\_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-19-1.pdf}
+
+Distribuição da escolaridade entre as mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ education\_level, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Escolaridade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por escolaridade\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+Distribuição do tipo de emprego entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ employment\_status, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Período de Trabalho\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por emprego\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+Distribuição da renda entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ income\_quantile, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Renda (quartil)\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por renda\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Primeiro\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Segundo\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Terceiro\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Quarto\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+Distribuição da renda entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ income\_level, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Nível de renda\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por nível de renda\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Baixa\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Média\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Alta\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-23-1.pdf}
+
+Distribuição da localização entre mulheres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svy\_mulheres }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggsurvey}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ rural\_area, }\AttributeTok{y=}\NormalTok{ ..count.. }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(..count..)), }\AttributeTok{fill =} \StringTok{\textquotesingle{}\#69b3a2\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{\textquotesingle{}Nível de urbanização\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Frequência relativa\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{\textquotesingle{}Distribuição de mulheres por nível de urbanização no local de residência\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{caption =} \StringTok{\textquotesingle{}WVS (wave 7)\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{12}\NormalTok{, }\AttributeTok{face=}\StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
+        \AttributeTok{legend.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.text=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{8}\NormalTok{),}
+        \AttributeTok{axis.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{),}
+        \AttributeTok{legend.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Urbano\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Periferia urbana\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}rural\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-24-1.pdf}
+
+\hypertarget{estimauxe7uxe3o}{%
+\section{Estimação}\label{estimauxe7uxe3o}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{modelo\_mpl }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(}\FunctionTok{as.numeric}\NormalTok{(happy) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ conformity }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ income\_quantile }\SpecialCharTok{+}\NormalTok{ number\_children }\SpecialCharTok{+} 
+\NormalTok{                       education\_level  }\SpecialCharTok{+}\NormalTok{ employment\_status, }
+                     \AttributeTok{design=}\NormalTok{svy\_mulheres,}
+                     \AttributeTok{family=}\NormalTok{stats}\SpecialCharTok{::}\FunctionTok{gaussian}\NormalTok{(}\AttributeTok{link=}\StringTok{"identity"}\NormalTok{)) }\CommentTok{\# modelo MPL}
+
+\NormalTok{modelo\_logit }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ conformity }\SpecialCharTok{+}\NormalTok{  age }\SpecialCharTok{+}\NormalTok{ income\_quantile }\SpecialCharTok{+}\NormalTok{ number\_children }\SpecialCharTok{+} 
+\NormalTok{                         education\_level  }\SpecialCharTok{+}\NormalTok{ employment\_status, }
+                     \AttributeTok{design=}\NormalTok{svy\_mulheres,}
+                     \AttributeTok{family=}\FunctionTok{binomial}\NormalTok{(}\AttributeTok{link=}\StringTok{"logit"}\NormalTok{)) }\CommentTok{\# modelo logit}
+
+\NormalTok{modelo\_probit }\OtherTok{\textless{}{-}} \FunctionTok{svyglm}\NormalTok{(happy }\SpecialCharTok{\textasciitilde{}}\NormalTok{ conformity }\SpecialCharTok{+}\NormalTok{  age }\SpecialCharTok{+}\NormalTok{ income\_quantile }\SpecialCharTok{+}\NormalTok{ number\_children }\SpecialCharTok{+} 
+\NormalTok{                        education\_level  }\SpecialCharTok{+}\NormalTok{ employment\_status, }
+                      \AttributeTok{design=}\NormalTok{svy\_mulheres,}
+                      \AttributeTok{family=}\FunctionTok{binomial}\NormalTok{(}\AttributeTok{link=}\StringTok{"probit"}\NormalTok{)) }\CommentTok{\# modelo probit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{margins\_logit }\OtherTok{\textless{}{-}} \FunctionTok{margins}\NormalTok{(modelo\_logit, }\AttributeTok{design=}\NormalTok{svy\_mulheres) }\CommentTok{\# efeitos marginais de logit}
+
+\NormalTok{margins\_probit }\OtherTok{\textless{}{-}} \FunctionTok{margins}\NormalTok{(modelo\_probit, }\AttributeTok{design=}\NormalTok{svy\_mulheres) }\CommentTok{\# efeitos marginais de probit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(modelo\_logit) }\CommentTok{\# tabela de coeficientes para logit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ conformity + age + income_quantile + 
+##     number_children + education_level + employment_status, design = svy_mulheres, 
+##     family = binomial(link = "logit"))
+## 
+## Survey design:
+## svydesign(id = ~1, weights = wvs_mulheres$sample_weight, data = wvs_mulheres)
+## 
+## Coefficients:
+##                                      Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                         1.1285103  0.0887630  12.714  < 2e-16 ***
+## conformity1                         0.1850154  0.0363387   5.091 3.57e-07 ***
+## age41 - 50                         -0.0001287  0.0720127  -0.002 0.998575    
+## ageAcima de 70                     -0.1046883  0.0653229  -1.603 0.109026    
+## age31 - 40                         -0.0275042  0.0706108  -0.390 0.696895    
+## age18 - 30                          0.1742633  0.0745247   2.338 0.019376 *  
+## ageAbaixo de 18                     0.1686613  0.3901417   0.432 0.665521    
+## income_quantile2                    0.3717618  0.0504790   7.365 1.82e-13 ***
+## income_quantile3                    0.8666948  0.0496456  17.458  < 2e-16 ***
+## income_quantile4                    1.1395230  0.0616498  18.484  < 2e-16 ***
+## number_childrenTrês ou mais filhos -0.0911311  0.0449794  -2.026 0.042766 *  
+## number_childrenUm filho            -0.1164215  0.0524748  -2.219 0.026519 *  
+## number_childrenSem filhos          -0.2203524  0.0574379  -3.836 0.000125 ***
+## education_levelMédio                0.1511599  0.0435607   3.470 0.000521 ***
+## education_levelAlto                 0.2867379  0.0501629   5.716 1.10e-08 ***
+## employment_statusDo lar            -0.0513771  0.0522199  -0.984 0.325192    
+## employment_statusDesempregado      -0.3205905  0.0603926  -5.308 1.11e-07 ***
+## employment_statusAutônomo          -0.1559041  0.0596601  -2.613 0.008974 ** 
+## employment_statusParcial           -0.0858247  0.0793322  -1.082 0.279332    
+## employment_statusAposentado        -0.2834837  0.0708199  -4.003 6.27e-05 ***
+## employment_statusOutros            -0.4872046  0.1751482  -2.782 0.005411 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1.003731)
+## 
+## Number of Fisher Scoring iterations: 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(margins\_logit) }\CommentTok{\# tabela de efeitos marginais para logit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                              factor     AME     SE       z      p   lower
+##                          age18 - 30  0.0203 0.0089  2.2879 0.0221  0.0027
+##                          age31 - 40 -0.0034 0.0088 -0.3910 0.6958 -0.0205
+##                          age41 - 50 -0.0000 0.0089 -0.0018 0.9986 -0.0174
+##                     ageAbaixo de 18  0.0197 0.0430  0.4570 0.6477 -0.0648
+##                      ageAcima de 70 -0.0134 0.0082 -1.6254 0.1041 -0.0294
+##                         conformity1  0.0225 0.0044  5.0796 0.0000  0.0136
+##                 education_levelAlto  0.0346 0.0061  5.7180 0.0000  0.0226
+##                education_levelMédio  0.0191 0.0055  3.4493 0.0006  0.0081
+##         employment_statusAposentado -0.0349 0.0091 -3.8304 0.0001 -0.0525
+##           employment_statusAutônomo -0.0184 0.0071 -2.5776 0.0099 -0.0322
+##       employment_statusDesempregado -0.0400 0.0078 -5.1315 0.0000 -0.0550
+##             employment_statusDo lar -0.0058 0.0059 -0.9846 0.3248 -0.0174
+##             employment_statusOutros -0.0642 0.0264 -2.4278 0.0152 -0.1156
+##            employment_statusParcial -0.0099 0.0093 -1.0623 0.2881 -0.0280
+##                    income_quantile2  0.0604 0.0085  7.1353 0.0000  0.0436
+##                    income_quantile3  0.1215 0.0078 15.5070 0.0000  0.1056
+##                    income_quantile4  0.1468 0.0082 17.7966 0.0000  0.1299
+##           number_childrenSem filhos -0.0269 0.0071 -3.7671 0.0002 -0.0407
+##  number_childrenTrês ou mais filhos -0.0106 0.0053 -2.0271 0.0427 -0.0209
+##             number_childrenUm filho -0.0137 0.0062 -2.2015 0.0277 -0.0258
+##    upper
+##   0.0375
+##   0.0138
+##   0.0174
+##   0.1038
+##   0.0029
+##   0.0310
+##   0.0463
+##   0.0298
+##  -0.0168
+##  -0.0043
+##  -0.0244
+##   0.0058
+##  -0.0120
+##   0.0084
+##   0.0768
+##   0.1363
+##   0.1622
+##  -0.0127
+##  -0.0003
+##  -0.0014
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(modelo\_probit) }\CommentTok{\# tabela de coeficientes para probit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## svyglm(formula = happy ~ conformity + age + income_quantile + 
+##     number_children + education_level + employment_status, design = svy_mulheres, 
+##     family = binomial(link = "probit"))
+## 
+## Survey design:
+## svydesign(id = ~1, weights = wvs_mulheres$sample_weight, data = wvs_mulheres)
+## 
+## Coefficients:
+##                                     Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)                         0.689126   0.049340  13.967  < 2e-16 ***
+## conformity1                         0.099112   0.019777   5.011 5.43e-07 ***
+## age41 - 50                          0.002251   0.039694   0.057 0.954780    
+## ageAcima de 70                     -0.055377   0.036316  -1.525 0.127302    
+## age31 - 40                         -0.015060   0.038948  -0.387 0.699007    
+## age18 - 30                          0.090316   0.040837   2.212 0.027000 *  
+## ageAbaixo de 18                     0.077872   0.217434   0.358 0.720239    
+## income_quantile2                    0.214720   0.029126   7.372 1.72e-13 ***
+## income_quantile3                    0.483342   0.028048  17.233  < 2e-16 ***
+## income_quantile4                    0.622558   0.033352  18.666  < 2e-16 ***
+## number_childrenTrês ou mais filhos -0.052609   0.024482  -2.149 0.031654 *  
+## number_childrenUm filho            -0.063839   0.028347  -2.252 0.024323 *  
+## number_childrenSem filhos          -0.117483   0.031092  -3.779 0.000158 ***
+## education_levelMédio                0.083919   0.023856   3.518 0.000436 ***
+## education_levelAlto                 0.155718   0.027026   5.762 8.39e-09 ***
+## employment_statusDo lar            -0.025510   0.028044  -0.910 0.363010    
+## employment_statusDesempregado      -0.172367   0.032924  -5.235 1.66e-07 ***
+## employment_statusAutônomo          -0.083661   0.032299  -2.590 0.009596 ** 
+## employment_statusParcial           -0.041835   0.041840  -1.000 0.317377    
+## employment_statusAposentado        -0.148722   0.039113  -3.802 0.000144 ***
+## employment_statusOutros            -0.267504   0.100104  -2.672 0.007538 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1.003628)
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(margins\_probit) }\CommentTok{\# tabela de efeitos marginais para probit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                              factor     AME     SE       z      p   lower
+##                          age18 - 30  0.0194 0.0089  2.1715 0.0299  0.0017
+##                          age31 - 40 -0.0034 0.0088 -0.3880 0.6981 -0.0206
+##                          age41 - 50  0.0005 0.0089  0.0567 0.9548 -0.0170
+##                     ageAbaixo de 18  0.0168 0.0452  0.3725 0.7095 -0.0718
+##                      ageAcima de 70 -0.0128 0.0083 -1.5425 0.1230 -0.0290
+##                         conformity1  0.0220 0.0044  5.0034 0.0000  0.0132
+##                 education_levelAlto  0.0345 0.0060  5.7507 0.0000  0.0226
+##                education_levelMédio  0.0193 0.0055  3.4984 0.0005  0.0084
+##         employment_statusAposentado -0.0334 0.0091 -3.6639 0.0002 -0.0511
+##           employment_statusAutônomo -0.0182 0.0071 -2.5585 0.0105 -0.0320
+##       employment_statusDesempregado -0.0392 0.0077 -5.0817 0.0000 -0.0541
+##             employment_statusDo lar -0.0054 0.0059 -0.9099 0.3629 -0.0169
+##             employment_statusOutros -0.0637 0.0267 -2.3888 0.0169 -0.1157
+##            employment_statusParcial -0.0089 0.0090 -0.9865 0.3239 -0.0265
+##                    income_quantile2  0.0609 0.0085  7.1772 0.0000  0.0441
+##                    income_quantile3  0.1219 0.0078 15.5451 0.0000  0.1061
+##                    income_quantile4  0.1468 0.0083 17.7977 0.0000  0.1301
+##           number_childrenSem filhos -0.0261 0.0070 -3.7256 0.0002 -0.0397
+##  number_childrenTrês ou mais filhos -0.0113 0.0053 -2.1483 0.0317 -0.0216
+##             number_childrenUm filho -0.0138 0.0062 -2.2377 0.0252 -0.0258
+##    upper
+##   0.0367
+##   0.0138
+##   0.0180
+##   0.1052
+##   0.0036
+##   0.0305
+##   0.0461
+##   0.0300
+##  -0.0154
+##  -0.0042
+##  -0.0239
+##   0.0062
+##  -0.0111
+##   0.0088
+##   0.0774
+##   0.1368
+##   0.1625
+##  -0.0122
+##  -0.0009
+##  -0.0016
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{odds\_logit }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(}\FunctionTok{coef}\NormalTok{(modelo\_logit),}\FunctionTok{confint}\NormalTok{(modelo\_logit))) }\CommentTok{\# odds para o modelo logit}
+\FunctionTok{stargazer}\NormalTok{(odds\_logit, }\AttributeTok{summary =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+## % Date and time: dom, set 18, 2022 - 16:21:03
+## \begin{table}[!htbp] \centering 
+##   \caption{} 
+##   \label{} 
+## \begin{tabular}{@{\extracolsep{5pt}} cccc} 
+## \\[-1.8ex]\hline 
+## \hline \\[-1.8ex] 
+##  & .1 & 2.5 \% & 97.5 \% \\ 
+## \hline \\[-1.8ex] 
+## (Intercept) & $3.091$ & $2.597$ & $3.678$ \\ 
+## conformity1 & $1.203$ & $1.121$ & $1.292$ \\ 
+## age41 - 50 & $1.000$ & $0.868$ & $1.151$ \\ 
+## ageAcima de 70 & $0.901$ & $0.792$ & $1.024$ \\ 
+## age31 - 40 & $0.973$ & $0.847$ & $1.117$ \\ 
+## age18 - 30 & $1.190$ & $1.029$ & $1.378$ \\ 
+## ageAbaixo de 18 & $1.184$ & $0.551$ & $2.543$ \\ 
+## income\_quantile2 & $1.450$ & $1.314$ & $1.601$ \\ 
+## income\_quantile3 & $2.379$ & $2.158$ & $2.622$ \\ 
+## income\_quantile4 & $3.125$ & $2.770$ & $3.527$ \\ 
+## number\_childrenTrês ou mais filhos & $0.913$ & $0.836$ & $0.997$ \\ 
+## number\_childrenUm filho & $0.890$ & $0.803$ & $0.987$ \\ 
+## number\_childrenSem filhos & $0.802$ & $0.717$ & $0.898$ \\ 
+## education\_levelMédio & $1.163$ & $1.068$ & $1.267$ \\ 
+## education\_levelAlto & $1.332$ & $1.207$ & $1.470$ \\ 
+## employment\_statusDo lar & $0.950$ & $0.858$ & $1.052$ \\ 
+## employment\_statusDesempregado & $0.726$ & $0.645$ & $0.817$ \\ 
+## employment\_statusAutônomo & $0.856$ & $0.761$ & $0.962$ \\ 
+## employment\_statusParcial & $0.918$ & $0.786$ & $1.072$ \\ 
+## employment\_statusAposentado & $0.753$ & $0.656$ & $0.865$ \\ 
+## employment\_statusOutros & $0.614$ & $0.436$ & $0.866$ \\ 
+## \hline \\[-1.8ex] 
+## \end{tabular} 
+## \end{table}
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{stargazer}\NormalTok{(modelo\_mpl, modelo\_logit, modelo\_probit) }\CommentTok{\# tabela de coeficientes dos três modelos}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+## % Date and time: dom, set 18, 2022 - 16:21:04
+## \begin{table}[!htbp] \centering 
+##   \caption{} 
+##   \label{} 
+## \begin{tabular}{@{\extracolsep{5pt}}lccc} 
+## \\[-1.8ex]\hline 
+## \hline \\[-1.8ex] 
+##  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+## \cline{2-4} 
+## \\[-1.8ex] & as.numeric(happy) & \multicolumn{2}{c}{happy} \\ 
+## \\[-1.8ex] & \textit{survey-weighted} & \textit{survey-weighted} & \textit{survey-weighted} \\ 
+##  & \textit{normal} & \textit{logistic} & \textit{probit} \\ 
+## \\[-1.8ex] & (1) & (2) & (3)\\ 
+## \hline \\[-1.8ex] 
+##  conformity1 & 0.023$^{***}$ & 0.185$^{***}$ & 0.099$^{***}$ \\ 
+##   & (0.004) & (0.036) & (0.020) \\ 
+##   & & & \\ 
+##  age41 - 50 & $-$0.001 & $-$0.0001 & 0.002 \\ 
+##   & (0.009) & (0.072) & (0.040) \\ 
+##   & & & \\ 
+##  ageAcima de 70 & $-$0.014 & $-$0.105 & $-$0.055 \\ 
+##   & (0.009) & (0.065) & (0.036) \\ 
+##   & & & \\ 
+##  age31 - 40 & $-$0.004 & $-$0.028 & $-$0.015 \\ 
+##   & (0.009) & (0.071) & (0.039) \\ 
+##   & & & \\ 
+##  age18 - 30 & 0.019$^{**}$ & 0.174$^{**}$ & 0.090$^{**}$ \\ 
+##   & (0.010) & (0.075) & (0.041) \\ 
+##   & & & \\ 
+##  ageAbaixo de 18 & 0.020 & 0.169 & 0.078 \\ 
+##   & (0.054) & (0.390) & (0.217) \\ 
+##   & & & \\ 
+##  income\_quantile2 & 0.064$^{***}$ & 0.372$^{***}$ & 0.215$^{***}$ \\ 
+##   & (0.009) & (0.050) & (0.029) \\ 
+##   & & & \\ 
+##  income\_quantile3 & 0.126$^{***}$ & 0.867$^{***}$ & 0.483$^{***}$ \\ 
+##   & (0.008) & (0.050) & (0.028) \\ 
+##   & & & \\ 
+##  income\_quantile4 & 0.150$^{***}$ & 1.140$^{***}$ & 0.623$^{***}$ \\ 
+##   & (0.008) & (0.062) & (0.033) \\ 
+##   & & & \\ 
+##  number\_childrenTrês ou mais filhos & $-$0.011$^{**}$ & $-$0.091$^{**}$ & $-$0.053$^{**}$ \\ 
+##   & (0.005) & (0.045) & (0.024) \\ 
+##   & & & \\ 
+##  number\_childrenUm filho & $-$0.014$^{**}$ & $-$0.116$^{**}$ & $-$0.064$^{**}$ \\ 
+##   & (0.006) & (0.052) & (0.028) \\ 
+##   & & & \\ 
+##  number\_childrenSem filhos & $-$0.025$^{***}$ & $-$0.220$^{***}$ & $-$0.117$^{***}$ \\ 
+##   & (0.007) & (0.057) & (0.031) \\ 
+##   & & & \\ 
+##  education\_levelMédio & 0.020$^{***}$ & 0.151$^{***}$ & 0.084$^{***}$ \\ 
+##   & (0.006) & (0.044) & (0.024) \\ 
+##   & & & \\ 
+##  education\_levelAlto & 0.034$^{***}$ & 0.287$^{***}$ & 0.156$^{***}$ \\ 
+##   & (0.006) & (0.050) & (0.027) \\ 
+##   & & & \\ 
+##  employment\_statusDo lar & $-$0.004 & $-$0.051 & $-$0.026 \\ 
+##   & (0.006) & (0.052) & (0.028) \\ 
+##   & & & \\ 
+##  employment\_statusDesempregado & $-$0.039$^{***}$ & $-$0.321$^{***}$ & $-$0.172$^{***}$ \\ 
+##   & (0.008) & (0.060) & (0.033) \\ 
+##   & & & \\ 
+##  employment\_statusAutônomo & $-$0.017$^{**}$ & $-$0.156$^{***}$ & $-$0.084$^{***}$ \\ 
+##   & (0.007) & (0.060) & (0.032) \\ 
+##   & & & \\ 
+##  employment\_statusParcial & $-$0.009 & $-$0.086 & $-$0.042 \\ 
+##   & (0.009) & (0.079) & (0.042) \\ 
+##   & & & \\ 
+##  employment\_statusAposentado & $-$0.035$^{***}$ & $-$0.283$^{***}$ & $-$0.149$^{***}$ \\ 
+##   & (0.009) & (0.071) & (0.039) \\ 
+##   & & & \\ 
+##  employment\_statusOutros & $-$0.070$^{**}$ & $-$0.487$^{***}$ & $-$0.268$^{***}$ \\ 
+##   & (0.029) & (0.175) & (0.100) \\ 
+##   & & & \\ 
+##  Constant & 1.751$^{***}$ & 1.129$^{***}$ & 0.689$^{***}$ \\ 
+##   & (0.013) & (0.089) & (0.049) \\ 
+##   & & & \\ 
+## \hline \\[-1.8ex] 
+## Observations & 33,331 & 33,331 & 33,331 \\ 
+## Log Likelihood & $-$13,283.630 & $-$13,652.380 & $-$13,655.720 \\ 
+## Akaike Inf. Crit. & 26,609.260 & 27,346.770 & 27,353.440 \\ 
+## \hline 
+## \hline \\[-1.8ex] 
+## \textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+## \end{tabular} 
+## \end{table}
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{stargazer}\NormalTok{(}\FunctionTok{summary}\NormalTok{(margins\_logit), }\AttributeTok{summary =} \ConstantTok{FALSE}\NormalTok{) }\CommentTok{\# tabela de efeitos marginais do modelo logit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+## % Date and time: dom, set 18, 2022 - 16:21:05
+## \begin{table}[!htbp] \centering 
+##   \caption{} 
+##   \label{} 
+## \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+## \\[-1.8ex]\hline 
+## \hline \\[-1.8ex] 
+##  & factor & AME & SE & z & p & lower & upper \\ 
+## \hline \\[-1.8ex] 
+## 1 & age18 - 30 & $0.020$ & $0.009$ & $2.288$ & $0.022$ & $0.003$ & $0.037$ \\ 
+## 2 & age31 - 40 & $$-$0.003$ & $0.009$ & $$-$0.391$ & $0.696$ & $$-$0.021$ & $0.014$ \\ 
+## 3 & age41 - 50 & $$-$0.00002$ & $0.009$ & $$-$0.002$ & $0.999$ & $$-$0.017$ & $0.017$ \\ 
+## 4 & ageAbaixo de 18 & $0.020$ & $0.043$ & $0.457$ & $0.648$ & $$-$0.065$ & $0.104$ \\ 
+## 5 & ageAcima de 70 & $$-$0.013$ & $0.008$ & $$-$1.625$ & $0.104$ & $$-$0.029$ & $0.003$ \\ 
+## 6 & conformity1 & $0.022$ & $0.004$ & $5.080$ & $0.00000$ & $0.014$ & $0.031$ \\ 
+## 7 & education\_levelAlto & $0.035$ & $0.006$ & $5.718$ & $0$ & $0.023$ & $0.046$ \\ 
+## 8 & education\_levelMédio & $0.019$ & $0.006$ & $3.449$ & $0.001$ & $0.008$ & $0.030$ \\ 
+## 9 & employment\_statusAposentado & $$-$0.035$ & $0.009$ & $$-$3.830$ & $0.0001$ & $$-$0.053$ & $$-$0.017$ \\ 
+## 10 & employment\_statusAutônomo & $$-$0.018$ & $0.007$ & $$-$2.578$ & $0.010$ & $$-$0.032$ & $$-$0.004$ \\ 
+## 11 & employment\_statusDesempregado & $$-$0.040$ & $0.008$ & $$-$5.132$ & $0.00000$ & $$-$0.055$ & $$-$0.024$ \\ 
+## 12 & employment\_statusDo lar & $$-$0.006$ & $0.006$ & $$-$0.985$ & $0.325$ & $$-$0.017$ & $0.006$ \\ 
+## 13 & employment\_statusOutros & $$-$0.064$ & $0.026$ & $$-$2.428$ & $0.015$ & $$-$0.116$ & $$-$0.012$ \\ 
+## 14 & employment\_statusParcial & $$-$0.010$ & $0.009$ & $$-$1.062$ & $0.288$ & $$-$0.028$ & $0.008$ \\ 
+## 15 & income\_quantile2 & $0.060$ & $0.008$ & $7.135$ & $0$ & $0.044$ & $0.077$ \\ 
+## 16 & income\_quantile3 & $0.121$ & $0.008$ & $15.507$ & $0$ & $0.106$ & $0.136$ \\ 
+## 17 & income\_quantile4 & $0.147$ & $0.008$ & $17.797$ & $0$ & $0.130$ & $0.162$ \\ 
+## 18 & number\_childrenSem filhos & $$-$0.027$ & $0.007$ & $$-$3.767$ & $0.0002$ & $$-$0.041$ & $$-$0.013$ \\ 
+## 19 & number\_childrenTrês ou mais filhos & $$-$0.011$ & $0.005$ & $$-$2.027$ & $0.043$ & $$-$0.021$ & $$-$0.0003$ \\ 
+## 20 & number\_childrenUm filho & $$-$0.014$ & $0.006$ & $$-$2.202$ & $0.028$ & $$-$0.026$ & $$-$0.001$ \\ 
+## \hline \\[-1.8ex] 
+## \end{tabular} 
+## \end{table}
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{stargazer}\NormalTok{(}\FunctionTok{summary}\NormalTok{(margins\_probit), }\AttributeTok{summary =} \ConstantTok{FALSE}\NormalTok{) }\CommentTok{\# tabela de efeitos marginais do moelo probit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+## % Date and time: dom, set 18, 2022 - 16:21:05
+## \begin{table}[!htbp] \centering 
+##   \caption{} 
+##   \label{} 
+## \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+## \\[-1.8ex]\hline 
+## \hline \\[-1.8ex] 
+##  & factor & AME & SE & z & p & lower & upper \\ 
+## \hline \\[-1.8ex] 
+## 1 & age18 - 30 & $0.019$ & $0.009$ & $2.172$ & $0.030$ & $0.002$ & $0.037$ \\ 
+## 2 & age31 - 40 & $$-$0.003$ & $0.009$ & $$-$0.388$ & $0.698$ & $$-$0.021$ & $0.014$ \\ 
+## 3 & age41 - 50 & $0.001$ & $0.009$ & $0.057$ & $0.955$ & $$-$0.017$ & $0.018$ \\ 
+## 4 & ageAbaixo de 18 & $0.017$ & $0.045$ & $0.372$ & $0.710$ & $$-$0.072$ & $0.105$ \\ 
+## 5 & ageAcima de 70 & $$-$0.013$ & $0.008$ & $$-$1.542$ & $0.123$ & $$-$0.029$ & $0.004$ \\ 
+## 6 & conformity1 & $0.022$ & $0.004$ & $5.003$ & $0.00000$ & $0.013$ & $0.030$ \\ 
+## 7 & education\_levelAlto & $0.035$ & $0.006$ & $5.751$ & $0$ & $0.023$ & $0.046$ \\ 
+## 8 & education\_levelMédio & $0.019$ & $0.006$ & $3.498$ & $0.0005$ & $0.008$ & $0.030$ \\ 
+## 9 & employment\_statusAposentado & $$-$0.033$ & $0.009$ & $$-$3.664$ & $0.0002$ & $$-$0.051$ & $$-$0.015$ \\ 
+## 10 & employment\_statusAutônomo & $$-$0.018$ & $0.007$ & $$-$2.558$ & $0.011$ & $$-$0.032$ & $$-$0.004$ \\ 
+## 11 & employment\_statusDesempregado & $$-$0.039$ & $0.008$ & $$-$5.082$ & $0.00000$ & $$-$0.054$ & $$-$0.024$ \\ 
+## 12 & employment\_statusDo lar & $$-$0.005$ & $0.006$ & $$-$0.910$ & $0.363$ & $$-$0.017$ & $0.006$ \\ 
+## 13 & employment\_statusOutros & $$-$0.064$ & $0.027$ & $$-$2.389$ & $0.017$ & $$-$0.116$ & $$-$0.011$ \\ 
+## 14 & employment\_statusParcial & $$-$0.009$ & $0.009$ & $$-$0.986$ & $0.324$ & $$-$0.027$ & $0.009$ \\ 
+## 15 & income\_quantile2 & $0.061$ & $0.008$ & $7.177$ & $0$ & $0.044$ & $0.077$ \\ 
+## 16 & income\_quantile3 & $0.122$ & $0.008$ & $15.545$ & $0$ & $0.106$ & $0.137$ \\ 
+## 17 & income\_quantile4 & $0.147$ & $0.008$ & $17.798$ & $0$ & $0.130$ & $0.162$ \\ 
+## 18 & number\_childrenSem filhos & $$-$0.026$ & $0.007$ & $$-$3.726$ & $0.0002$ & $$-$0.040$ & $$-$0.012$ \\ 
+## 19 & number\_childrenTrês ou mais filhos & $$-$0.011$ & $0.005$ & $$-$2.148$ & $0.032$ & $$-$0.022$ & $$-$0.001$ \\ 
+## 20 & number\_childrenUm filho & $$-$0.014$ & $0.006$ & $$-$2.238$ & $0.025$ & $$-$0.026$ & $$-$0.002$ \\ 
+## \hline \\[-1.8ex] 
+## \end{tabular} 
+## \end{table}
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{roc\_logit }\OtherTok{\textless{}{-}} \FunctionTok{rocit}\NormalTok{(}\AttributeTok{score =}\NormalTok{ modelo\_logit}\SpecialCharTok{$}\NormalTok{fitted.values, }\AttributeTok{class =}\NormalTok{ modelo\_logit}\SpecialCharTok{$}\NormalTok{y) }\CommentTok{\# obtendo a curva roc do modelo logit}
+
+\NormalTok{measure\_logit }\OtherTok{\textless{}{-}} \FunctionTok{measureit}\NormalTok{(roc\_logit, }\AttributeTok{measure =} \FunctionTok{c}\NormalTok{(}\StringTok{"ACC"}\NormalTok{,}\StringTok{"SENS"}\NormalTok{,}\StringTok{"SPEC"}\NormalTok{)) }\CommentTok{\# obtendo acurácia, sensibilidade e especificidade do modelo logit}
+
+\CommentTok{\#Acurácia total do modelo logit}
+\FunctionTok{plot}\NormalTok{(measure\_logit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_logit}\SpecialCharTok{$}\NormalTok{ACC)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-33-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Focando especificamente na sensibilidade do modelo logit}
+\FunctionTok{plot}\NormalTok{(measure\_logit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_logit}\SpecialCharTok{$}\NormalTok{SENS)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-33-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Focando na especificidade do modelo logit}
+\FunctionTok{plot}\NormalTok{(measure\_logit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_logit}\SpecialCharTok{$}\NormalTok{SPEC)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-33-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(roc\_logit) }\CommentTok{\# plotando a curva roc do modelo logit}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-33-4.pdf}
+\emph{Pearson or Hosmer-Lemeshow goodness-of-fit test:}
+
+H0: Modelo bem especificado\\
+HA: Modelo mal especificado
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hoslem.test}\NormalTok{(modelo\_logit}\SpecialCharTok{$}\NormalTok{y,}\FunctionTok{fitted}\NormalTok{(modelo\_logit),}\AttributeTok{g=}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Hosmer and Lemeshow goodness of fit (GOF) test
+## 
+## data:  modelo_logit$y, fitted(modelo_logit)
+## X-squared = 10.977, df = 8, p-value = 0.203
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{roc\_probit }\OtherTok{\textless{}{-}} \FunctionTok{rocit}\NormalTok{(}\AttributeTok{score =}\NormalTok{ modelo\_probit}\SpecialCharTok{$}\NormalTok{fitted.values, }\AttributeTok{class =}\NormalTok{ modelo\_probit}\SpecialCharTok{$}\NormalTok{y) }\CommentTok{\# obtendo a curva roc do modelo probit}
+
+\NormalTok{measure\_probit }\OtherTok{\textless{}{-}} \FunctionTok{measureit}\NormalTok{(roc\_probit, }\AttributeTok{measure =} \FunctionTok{c}\NormalTok{(}\StringTok{"ACC"}\NormalTok{,}\StringTok{"SENS"}\NormalTok{,}\StringTok{"SPEC"}\NormalTok{)) }\CommentTok{\# obtendo acurácia, sensibilidade e especificidade do modelo probit}
+
+\CommentTok{\#Acurácia total do modelo probit}
+\FunctionTok{plot}\NormalTok{(measure\_probit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_probit}\SpecialCharTok{$}\NormalTok{ACC)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-35-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Focando especificamente na sensibilidade do modelo probit}
+\FunctionTok{plot}\NormalTok{(measure\_probit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_probit}\SpecialCharTok{$}\NormalTok{SENS)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-35-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Focando na especificidade do modelo probit}
+\FunctionTok{plot}\NormalTok{(measure\_probit}\SpecialCharTok{$}\NormalTok{Cutoff,measure\_probit}\SpecialCharTok{$}\NormalTok{SPEC)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-35-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(roc\_probit) }\CommentTok{\# plotando a curva roc do modelo probit}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{script_files/figure-latex/unnamed-chunk-35-4.pdf}
+
+\emph{Pearson or Hosmer-Lemeshow goodness-of-fit test:}
+
+H0: Modelo bem especificado\\
+HA: Modelo mal especificado
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hoslem.test}\NormalTok{(modelo\_probit}\SpecialCharTok{$}\NormalTok{y,}\FunctionTok{fitted}\NormalTok{(modelo\_probit),}\AttributeTok{g=}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Hosmer and Lemeshow goodness of fit (GOF) test
+## 
+## data:  modelo_probit$y, fitted(modelo_probit)
+## X-squared = 12.403, df = 8, p-value = 0.1341
+\end{verbatim}
+
+\end{document}
